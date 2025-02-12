@@ -57,16 +57,19 @@ type User struct {
 package main
 
 import (
+	"gorm.io/gorm"
     "github.com/gin-gonic/gin"
     "github.com/WinterQin/admingo"
-    "github.com/gin-contrib/cors"
-    "time"
 )
 
 func main() {
     // 初始化 Gin
     server := gin.Default()
-
+    // 初始化 Gorm
+	db, err = gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	if err != nil {
+		panic("failed to connect database")
+	}
     // 初始化 Admingo
     admin := admingo.NewAdmin(admingo.AdminConfig{
         DB:        db,        // 您的 GORM 实例
