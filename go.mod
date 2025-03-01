@@ -1,4 +1,4 @@
-module github.com/WinterQin/admingo
+module github.com/winterqin/admingo
 
 go 1.23.5
 

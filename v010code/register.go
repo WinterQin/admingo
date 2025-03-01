@@ -1,4 +1,4 @@
-package admingo
+package v010code
 
 import (
 	"fmt"
